@@ -68,7 +68,7 @@ DLLEXPORT double audio_get_pan(double handle) {
 		return audio->getPan();
 	} else {
 	    #ifdef DEBUG
-        std::cout << "Requested Pan from nonexistiant Handle! "<< std::endl << "Handle: " << handle << std::endl << "Returning 0.";
+        std::cout << "Requested Pan from nonexistiant Handle! "<< std::endl << "Handle: " << handle << std::endl << "Returning -1.";
         #endif
         return (-1);
     }
@@ -122,7 +122,7 @@ DLLEXPORT double sfx_get_pan(double handle)  {
         return sfx->getPan();
     }else{
         #ifdef DEBUG
-        std::cout << "Requested Pan from nonexistiant Handle! "<< std::endl << "Handle: " << handle << std::endl << "Returning 0.";
+        std::cout << "Requested Pan from nonexistiant Handle! "<< std::endl << "Handle: " << handle << std::endl << "Returning -1.";
         #endif
         return (-1);
         }
