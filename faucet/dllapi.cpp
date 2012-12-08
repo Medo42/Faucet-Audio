@@ -16,12 +16,18 @@ DLLEXPORT double audio_create(const char *filename, double stream) {
 		return outputStreamPointers.allocate(audio);
 	}
 }
-DLLEXPORT double audio_play(double handle) {
+DLLEXPORT double audio_play(double handle, double reset_if_playing) {
 	audiere::OutputStreamPtr audio = outputStreamPointers.find(handle);
 	if (!audio) {
 		return -1;
 	} else {
-		audio->play();
+	    if (reset_if_playing) {
+	        audio->reset();
+            audio->play();
+	    }else{
+            audio->play();
+	    }
+
 		return 0;
 	}
 }
