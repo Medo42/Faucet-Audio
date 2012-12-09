@@ -25,6 +25,7 @@ Functions
 ============
 audio_create(string filename)
 Creates a sound of the given filename, returns a handle of the sound instance
+
 audio_get_pan(handle)
 returns the pan of the current handle (pans range between -1.0 to 1.0)
 
