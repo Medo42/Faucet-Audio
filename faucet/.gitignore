@@ -1,0 +1,8 @@
+bin
+obj
+Faucet-Audio.dll
+Faucet-Audio.dll.a
+Faucet-Audio.dll.def
+Faucet-Audio.layout
+Faucet-Audio.depend
+test
